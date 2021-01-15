@@ -12,3 +12,11 @@
 ## [Python](https://github.com/chaofengliu/FuckingTheCode/tree/main/Python)
 
 ## [AI](https://github.com/chaofengliu/FuckingTheCode/tree/main/AI)
+
+
+
+## 整理不易，打赏点给口饭吃吧
+
+![支付宝](https://github.com/chaofengliu/FuckingTheCode/blob/main/alipay.jpg)
+
+![微信](https://github.com/chaofengliu/FuckingTheCode/blob/main/wechat.png)
