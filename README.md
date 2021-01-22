@@ -7,7 +7,7 @@
 
 ## [小程序](https://github.com/chaofengliu/FuckingTheCode/tree/main/%E5%B0%8F%E7%A8%8B%E5%BA%8F)
 
-## [数据结构与算法](https://github.com/chaofengliu/FuckingTheCode/tree/main/%E7%AE%97%E6%B3%95)
+## [数据结构与算法](https://github.com/chaofengliu/LovingTheCode/tree/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95)
 
 ## [Python](https://github.com/chaofengliu/FuckingTheCode/tree/main/Python)
 
