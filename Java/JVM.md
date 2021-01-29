@@ -21,7 +21,7 @@ JDK = JVM + 基础类库 + 编译工具
 
 
 ## 内存结构
-[JVM内存结构图](https://github.com/chaofengliu/LovingTheCode/blob/main/Java/jvm.webp ''JVM内存结构'')
+![JVM内存结构图](https://github.com/chaofengliu/LovingTheCode/blob/main/Java/jvm.webp)
 
 
 1. 程序计数器
