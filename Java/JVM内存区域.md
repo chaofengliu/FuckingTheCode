@@ -118,9 +118,6 @@ Java虚拟机在执行Java程序的过程中会把它所管理的内存划分为
 
 
 
-
-
-
 ## 本地方法栈
 本地方法栈（Native Method Stacks）为本地方法接口提供内存空间，为虚拟机使用到的Native方法服务。虚拟机规范中对本地方法栈中的方法使用的语言、使用方式与数据结构并没有强制规定，因此具体的虚拟机可以自由实现它。
 
@@ -134,14 +131,25 @@ Navtive方法是Java通过JNI直接调用本地C/C++库，可以认为是Native 
 
 
 ## 堆Heap
-- 通过new关键字创建对象都会使用对内存
+- Java堆（Java Heap）是Java虚拟机所管理的内存中最大的一块，也被称为 “GC堆”，是被所有线程共享的一块内存区域，在虚拟机启动时被创建。
+- 通过new关键字创建对象都会使用对内存，堆的作用就是储存对象实例和数组（JDK7已把字符串常量池和类静态变量移动到Java堆），几乎所有的对象实例都会存储在堆中分配。
+- Java堆是垃圾收集器管理的主要区域。堆内存分为新生代 (Young) 和老年代 (Old) ，新生代 (Young) 又被划分为三个区域：Eden、From Survivor、To Survivor。
 
-特点
+![](https://github.com/chaofengliu/LovingTheCode/blob/main/Java/14211474-9c07baf093518ad7.webp)
+
+- 从内存分配的角度看，线程共享的Java 堆中可能划分出多个线程私有的线程本地分配缓存区（Thread Local Allocation Buffer，TLAB）。
+- 根据 Java 虚拟机规范的规定，Java 堆可以处于物理上不连续的内存空间中，只要逻辑上是连续的即可，就像我们的磁盘空间一样。在实现时，既可以实现成固定大小的，也可以是可扩展的，不过当前主流的虚拟机都是按照可扩展来实现的（通过 -Xmx 和 -Xms 控制）。
+
+![](https://github.com/chaofengliu/LovingTheCode/blob/main/Java/14211474-140412d547164391.webp)
+
+
+堆的特点
 
 - 它是线程共享的，堆中对象都需要考虑线程安全的问题
 - 有垃圾回收机制
 
 ### 堆内存溢出
+- 如果Java堆可以动态扩展，并且在尝试扩展的时候无法申请到足够的内存，那Java虚拟机将抛出一个OutOfMemoryError异常。
 
 ### 堆内存诊断
 - jps工具 查看当前系统中有哪些java进程
